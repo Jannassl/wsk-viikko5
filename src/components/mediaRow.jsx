@@ -13,9 +13,11 @@ const MediaRow = (props) => {
               <td>{item.filesize}</td>
               <td>{item.media_type}</td>
               <td>
-                <button onClick={ () =>{
-                setSelectedItem(item)
-                }}>View</button>
+                <button
+                className=' m-3 mt-0 mb-0 p-3 rounded-lg bg-stone-500 text-stone-100 '
+                onClick={ () =>{ setSelectedItem(item)}}>
+                  View
+                  </button>
               </td>
             </tr>
   );
