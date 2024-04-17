@@ -66,7 +66,6 @@ const Home = () => {
           ))}
         </tbody>
       </table>
-      <SingleView selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
     </>
   );
 };

@@ -1,21 +1,20 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom"
+import SingleView from "../components/SingleView"
 
 const Single = () => {
-  const location = useLocation();
-  const { item } = location.state;
+  const location = useLocation()
+  const navigate = useNavigate()
 
-  return (
-    <div>
-      {item && (
-        <div>
-          <img src={item.filename} alt={item.title} />
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
-        </div>
-      )}
-    </div>
-  );
-};
+  if (!location.state?.item) {
+    return null
+  }
 
-export default Single;
+  const { item } = location.state
+
+  return <SingleView
+    selectedItem={item}
+    setSelectedItem={() => navigate(-1)}
+  />
+}
+
+export default Single

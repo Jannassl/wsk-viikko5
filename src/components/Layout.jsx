@@ -1,28 +1,21 @@
-import React from 'react'
-
-import {Link, Outlet} from 'react-router-dom'
+import { Link, Outlet } from "react-router-dom"
 
 const Layout = () => (
-    <div>
-  <nav>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/profile">Profile</Link>
-      </li>
-      <li>
+  <div>
+    <header>
+      <nav>
+        <Link to="/">Etusivu 🏠</Link>
+        <Link to="/profile">Profiili 😃</Link>
         <Link to="/upload">Upload</Link>
-      </li>
-
-    </ul>
-  </nav>
-  <main>
-
-    <Outlet />
-  </main>
-</div>
+      </nav>
+    </header>
+    <main>
+      <Outlet />
+    </main>
+    <footer className="m-12 text-xl">
+      Copyright 2024
+    </footer>
+  </div>
 )
 
 export default Layout
