@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 
+
 const SingleView = (props) => {
   const { setSelectedItem,selectedItem} = props;
   const modal = useRef(null);
@@ -19,7 +20,8 @@ const SingleView = (props) => {
     <>
       <dialog ref={modal}>
         <p>
-          <button onClick={handleClick}>Close</button>
+          <button className=' m-3 mt-0 mb-0 p-3 rounded-lg bg-stone-500 text-stone-100 '
+           onClick={handleClick}>Close</button>
         </p>
         {selectedItem && (
           <>
