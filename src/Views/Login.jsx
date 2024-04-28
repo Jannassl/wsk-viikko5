@@ -1,22 +1,20 @@
+import RegisterForm from "../components/RegisterForm.jsx";
+import LoginForm from "../components/LoginForm.jsx";
+import {useState} from "react";
+import Button from "../components/UI/Button.jsx";
 
-import LoginForm from "../components/LoginForm";
-import RegisterForm from "../components/RegisterForm";
-import { useState } from "react";
 
 const Login = () => {
-  const [isLoginForm, setIsLoginForm] = useState(true);
+  const [toggleForm, setToggleForm] = useState(true)
+  const toggle = () => {
+    setToggleForm(!toggleForm)
 
-  const toggleForm = () => {
-    setIsLoginForm(!isLoginForm);
-  };
-
+  }
   return (
-    <div>
-      {isLoginForm ? <LoginForm /> : <RegisterForm />}
-      <button onClick={toggleForm}>
-        Switch to {isLoginForm ? 'Register' : 'Login'}
-      </button>
-    </div>
+    <>
+      {toggleForm ? <LoginForm /> : <RegisterForm />}
+      <Button text={toggleForm ? "Not registered yet" : "Go to login"} handleClick={toggle}/>
+    </>
   );
 };
 
