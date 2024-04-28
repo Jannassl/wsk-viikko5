@@ -1,1 +1,1 @@
-Open [Linkki sovellukseen](https://users.metropolia.fi/~jannassl/hooks/)
+Open [Linkki sovellukseen](https://users.metropolia.fi/~jannassl/forms/)
