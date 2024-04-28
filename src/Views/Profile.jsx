@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import {useUser} from '../hooks/apiHooks';
+import {useUser} from '../hooks/ApiHooks';
 import {useEffect, useState} from 'react';
 
 export const Profile = () => {
